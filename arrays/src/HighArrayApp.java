@@ -28,6 +28,28 @@ class HighArray{
         nElems++;
     }
 
+    //Get maximum element
+    public void getMax(){
+        long max = a[0];
+        for(int i=0; i<nElems; i++){
+            if(a[i] > max){
+                max = a[i];
+            }
+        }
+        System.out.println("Max value is " + max);
+    }
+
+    //Get minimum element
+    public void getMin(){
+        long min = a[0];
+        for(int i=0; i<nElems; i++){
+            if(a[i] < min){
+                min = a[i];
+            }
+        }
+        System.out.println("Min element is " + min);
+    }
+
     //Delete element
     public boolean delete(long value){
         int j;
@@ -73,6 +95,8 @@ public class HighArrayApp {
         arr.insert(33);
 
         arr.display();
+        arr.getMax();
+        arr.getMin();
 
         //Search element 35
         int searchKey = 35;
@@ -81,11 +105,14 @@ public class HighArrayApp {
         }else{
             System.out.println("Cant find " + searchKey);
         }
+        
         //Delete elements
         arr.delete(00);
         arr.delete(55);
         arr.delete(99);
 
         arr.display();
+        arr.getMax();
+        arr.getMin(); 
     }
 }
