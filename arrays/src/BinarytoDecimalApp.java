@@ -1,7 +1,7 @@
 class BintoDec{
 
     private int[] a;
-    int nElems;
+    private int nElems;
 
     //constructor
     public BintoDec(int max){
@@ -33,7 +33,9 @@ class BintoDec{
         }
         System.out.println("Decimal value is " + dec);
     }
+}
 
+public class BinarytoDecimalApp{
     public static void main(String[] args) {
         int maxSize = 100;
         BintoDec arr = new BintoDec(maxSize);
